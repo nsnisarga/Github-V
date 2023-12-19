@@ -1,20 +1,13 @@
-def Fibonacci(n):
- 
-    if n < 0:
-        print("Incorrect input")
- 
-    
-    elif n == 0:
-        return 0
- 
-   
-    elif n == 1 or n == 2:
-        return 1
- 
-    else:
-        return Fibonacci(n-1) + Fibonacci(n-2)
- 
- 
-# Driver Program
+def fibonacciSeries(i):
+ if i <= 1:
+    return i
+ else:
+    return (fibonacciSeries(i - 1) + fibonacciSeries(i - 2))
 
-print(Fibonacci(9))
+num=int(input("enter the number of terms you want??"))
+if num <=0:
+  print("Please enter a Positive Number")
+else:
+  print("Fibonacci Series:", end=" ")
+for i in range(num):
+  print(fibonacciSeries(i), end=" ")
